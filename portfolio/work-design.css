@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #080800;
+    color: #fff;
+}
+
+#portfolio{
+    padding: 50px 0;
+}
+
+#portfolio h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 80px;
+    font-weight: 600;
+    margin-left: 100px;
+}
+
+.para{
+    margin: 30px 70px;
+    font-size: 20px;
+}
+
+.portfolio-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    padding: 10px;
+    grid-gap: 60px;
+    margin-top: 50px; 
+}
+
+.work{
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    color: white;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.layer a {
+    margin-top: 25px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    font-size: 22px;
+    background: #262626;
+    line-height: 80px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.layer a i{
+    color: #fff;
+}
+
+.work.layer.fa-solid{
+    color: #fff;
+}
+
+.work :hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px){
+    #portfolio h1{
+        font-size: 55px;
+        margin-left: 60px;
+    }
+
+    .work.fa-solid{
+        color: #fff;
+    }
+}
