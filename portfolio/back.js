@@ -1,3 +1,5 @@
+import { next } from '@vercel/edge'
+
 var tablinks = document.getElementsByClassName("tab-liks");
 var tabcontents = document.getElementsByClassName("tab-contents");
 var sidemeu = document.getElementById("sidemenu");
